@@ -8,10 +8,34 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    // MARK: - IBOutlets
+    @IBOutlet var buttonCollection: [UIButton]!
+    
+    // MARK: - Properties
+    
+    // MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        configureButton()
+    }
+    
+    // MARK: - Actions
+    @IBAction func buttonAction(_ sender: UIButton) {
+        
+    }
+    
+    
+    // MARK: - Methods
+    private func configureButton() {
+        // Add shadow
+        buttonCollection.forEach { button in
+            button.layer.shadowColor = UIColor.darkGray.cgColor
+            button.layer.shadowOffset = CGSize(width: 0, height: 2)
+            button.layer.shadowOpacity = 0.4
+            button.layer.shadowRadius = 3
+        }
     }
 
 

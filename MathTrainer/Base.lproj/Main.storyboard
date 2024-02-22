@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -14,23 +14,23 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MathTrainer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Math Trainer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXs-wm-PLm">
-                                <rect key="frame" x="69.666666666666686" y="223" width="254" height="48"/>
+                                <rect key="frame" x="80" y="245" width="254" height="48"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Что хотите тренировать?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xu-Nf-eKG">
-                                <rect key="frame" x="96" y="311" width="201" height="21"/>
+                                <rect key="frame" x="106.5" y="333" width="201" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z6q-ll-U9A">
-                                <rect key="frame" x="96.666666666666686" y="372" width="80" height="108"/>
+                                <rect key="frame" x="107" y="394" width="80" height="108"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJa-Hf-pyj">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -38,7 +38,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="1Op-D2-EkC"/>
                                             <constraint firstAttribute="height" constant="80" id="TDp-bb-hfL"/>
-                                            <constraint firstAttribute="width" constant="80" id="kY5-8r-72w"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="kY5-8r-72w"/>
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -50,6 +50,9 @@
                                                 <integer key="value" value="40"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wOb-16-4rf"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUg-cO-kmC">
                                         <rect key="frame" x="0.0" y="87" width="80" height="21"/>
@@ -70,13 +73,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZJ-Yj-pA9">
-                                <rect key="frame" x="216.66666666666663" y="372" width="80" height="108"/>
+                                <rect key="frame" x="227" y="394" width="80" height="108"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6R-jc-0FF">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6R-jc-0FF">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="ISy-xE-g3I"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="ISy-xE-g3I"/>
                                             <constraint firstAttribute="height" constant="80" id="LrK-Bf-Ttz"/>
                                             <constraint firstAttribute="height" constant="80" id="XfV-w3-FeT"/>
                                         </constraints>
@@ -90,6 +93,9 @@
                                                 <integer key="value" value="40"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uzw-ea-XRY"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBX-XO-Js1">
                                         <rect key="frame" x="0.0" y="87" width="80" height="21"/>
@@ -110,15 +116,15 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DOy-sL-JYS">
-                                <rect key="frame" x="96.666666666666686" y="500" width="80" height="108"/>
+                                <rect key="frame" x="107" y="522" width="80" height="108"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8f-fo-BtN">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8f-fo-BtN">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="6Oi-bI-REt"/>
                                             <constraint firstAttribute="height" constant="80" id="7U7-QD-c6R"/>
-                                            <constraint firstAttribute="width" constant="80" id="bVu-ZY-GkO"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="bVu-ZY-GkO"/>
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -130,6 +136,9 @@
                                                 <integer key="value" value="40"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="92u-Ja-zOl"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouN-DP-9rz">
                                         <rect key="frame" x="0.0" y="87" width="80" height="21"/>
@@ -150,15 +159,15 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8Y-QI-DPz">
-                                <rect key="frame" x="216.66666666666663" y="500" width="80" height="108"/>
+                                <rect key="frame" x="227" y="522" width="80" height="108"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VK8-GO-0OI">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VK8-GO-0OI">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="ese-eY-Lzq"/>
                                             <constraint firstAttribute="height" constant="80" id="frU-ZB-haP"/>
-                                            <constraint firstAttribute="width" constant="80" id="i1V-am-SQa"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="i1V-am-SQa"/>
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -170,6 +179,9 @@
                                                 <integer key="value" value="40"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kFc-S6-7kD"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hl-r0-cnU">
                                         <rect key="frame" x="0.0" y="87" width="80" height="21"/>
@@ -207,6 +219,12 @@
                             <constraint firstItem="w8Y-QI-DPz" firstAttribute="centerY" secondItem="DOy-sL-JYS" secondAttribute="centerY" id="zYG-Ac-dnn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="buttonCollection" destination="UJa-Hf-pyj" collectionClass="NSMutableArray" id="wJH-Kp-A3W"/>
+                        <outletCollection property="buttonCollection" destination="g6R-jc-0FF" collectionClass="NSMutableArray" id="Jmw-Ft-Jny"/>
+                        <outletCollection property="buttonCollection" destination="a8f-fo-BtN" collectionClass="NSMutableArray" id="DZW-qJ-cV3"/>
+                        <outletCollection property="buttonCollection" destination="VK8-GO-0OI" collectionClass="NSMutableArray" id="a0Y-x2-RxV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
