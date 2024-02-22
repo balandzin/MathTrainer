@@ -7,6 +7,10 @@
 
 import UIKit
 
+enum MathTypes: Int {
+    case add, subtract, multiply, divide
+}
+
 class ViewController: UIViewController {
     
     // MARK: - IBOutlets
