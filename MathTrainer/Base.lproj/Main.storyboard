@@ -321,6 +321,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lc5-04-OQo"/>
+                    <connections>
+                        <outletCollection property="buttonCollection" destination="ywy-md-gGL" collectionClass="NSMutableArray" id="aBo-Mv-GS6"/>
+                        <outletCollection property="buttonCollection" destination="5q1-dp-Bfb" collectionClass="NSMutableArray" id="z56-6H-COE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4K-PA-a8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="LJ1-t8-D8B" userLabel="Exit" sceneMemberID="exit"/>
