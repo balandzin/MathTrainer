@@ -9,9 +9,8 @@ import UIKit
 
 final class TrainViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-  
+    //MARK: - Properties
+    
+    var type: MathTypes = .add
+    
 }

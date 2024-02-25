@@ -17,6 +17,9 @@ final class ViewController: UIViewController {
     @IBOutlet var buttonCollection: [UIButton]!
     
     // MARK: - Properties
+    private var selectedType: MathTypes = .add
+        
+    // MARK: - Properties
     
     // MARK: - Lifecycles
     override func viewDidLoad() {
@@ -25,14 +28,20 @@ final class ViewController: UIViewController {
         configureButton()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewController = segue.destination as? TrainViewController {
+            viewController.type = selectedType
+        }
+    }
+    
     // MARK: - Actions
     @IBAction func buttonAction(_ sender: UIButton) {
+        selectedType = MathTypes(rawValue: sender.tag) ?? .add
+        
         performSegue(withIdentifier: "GoToNext", sender: sender)
     }
     
-    @IBAction func unwindAction(unwindSegue: UIStoryboardSegue) {
-        
-    }
+    @IBAction func unwindAction(unwindSegue: UIStoryboardSegue) {}
     
     
     // MARK: - Methods

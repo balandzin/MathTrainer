@@ -252,6 +252,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="LJ1-t8-D8B" kind="unwind" unwindAction="unwindActionWithUnwindSegue:" id="Syt-4X-INM"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34+27 = " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHQ-RT-mwv">
                                 <rect key="frame" x="118.5" y="389" width="177.5" height="48"/>
@@ -320,6 +323,7 @@
                     <navigationItem key="navigationItem" id="lc5-04-OQo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4K-PA-a8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="LJ1-t8-D8B" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="907.24637681159425" y="0.0"/>
         </scene>
