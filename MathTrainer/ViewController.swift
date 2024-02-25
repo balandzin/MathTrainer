@@ -11,7 +11,7 @@ enum MathTypes: Int {
     case add, subtract, multiply, divide
 }
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet var buttonCollection: [UIButton]!
@@ -27,6 +27,10 @@ class ViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func buttonAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "GoToNext", sender: sender)
+    }
+    
+    @IBAction func unwindAction(unwindSegue: UIStoryboardSegue) {
         
     }
     

@@ -224,22 +224,23 @@
                         <outletCollection property="buttonCollection" destination="g6R-jc-0FF" collectionClass="NSMutableArray" id="Jmw-Ft-Jny"/>
                         <outletCollection property="buttonCollection" destination="a8f-fo-BtN" collectionClass="NSMutableArray" id="DZW-qJ-cV3"/>
                         <outletCollection property="buttonCollection" destination="VK8-GO-0OI" collectionClass="NSMutableArray" id="a0Y-x2-RxV"/>
+                        <segue destination="Bwo-cv-DvC" kind="show" identifier="GoToNext" id="XML-W4-KPv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="133.58778625954199" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
+        <!--Train View Controller-->
         <scene sceneID="ggS-Ah-aId">
             <objects>
-                <viewController id="Bwo-cv-DvC" sceneMemberID="viewController">
+                <viewController id="Bwo-cv-DvC" customClass="TrainViewController" customModule="MathTrainer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ERr-aV-7Vn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTj-qL-ILj">
-                                <rect key="frame" x="50" y="98" width="56" height="28.5"/>
+                                <rect key="frame" x="50" y="50" width="56" height="28.5"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -252,18 +253,75 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34+27 = " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHQ-RT-mwv">
+                                <rect key="frame" x="118.5" y="389" width="177.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywy-md-gGL">
+                                <rect key="frame" x="107" y="557" width="80" height="80"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Zo9-Co-ZRO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="fsk-h6-Czy"/>
+                                    <constraint firstAttribute="height" constant="80" id="woF-Wg-q21"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="61">
+                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="30"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OzL-UF-twm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5q1-dp-Bfb">
+                                <rect key="frame" x="227" y="557" width="80" height="80"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="MJU-v8-OAV"/>
+                                    <constraint firstAttribute="height" constant="80" id="O4L-xe-qFT"/>
+                                    <constraint firstAttribute="height" constant="80" id="PUG-FG-ceF"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="72">
+                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="30"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WGI-0W-ty8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NRL-T1-vMO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="tTj-qL-ILj" firstAttribute="top" secondItem="NRL-T1-vMO" secondAttribute="top" constant="50" id="0a5-IU-HpA"/>
+                            <constraint firstItem="5q1-dp-Bfb" firstAttribute="centerY" secondItem="ywy-md-gGL" secondAttribute="centerY" id="6Vn-J0-vhs"/>
                             <constraint firstItem="tTj-qL-ILj" firstAttribute="leading" secondItem="NRL-T1-vMO" secondAttribute="leading" constant="50" id="Iif-re-7fL"/>
+                            <constraint firstItem="ywy-md-gGL" firstAttribute="top" secondItem="cHQ-RT-mwv" secondAttribute="bottom" constant="120" id="JtM-oa-BV0"/>
+                            <constraint firstItem="ywy-md-gGL" firstAttribute="centerX" secondItem="ERr-aV-7Vn" secondAttribute="centerX" constant="-60" id="faF-V5-LtF"/>
+                            <constraint firstItem="cHQ-RT-mwv" firstAttribute="centerY" secondItem="ERr-aV-7Vn" secondAttribute="centerY" constant="-30" id="tUT-Fh-IJ3"/>
+                            <constraint firstItem="5q1-dp-Bfb" firstAttribute="centerX" secondItem="ERr-aV-7Vn" secondAttribute="centerX" constant="60" id="uMg-PR-TNJ"/>
+                            <constraint firstItem="cHQ-RT-mwv" firstAttribute="centerX" secondItem="ERr-aV-7Vn" secondAttribute="centerX" id="vmg-Cg-IpI"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="lc5-04-OQo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4K-PA-a8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908" y="0.0"/>
+            <point key="canvasLocation" x="907.24637681159425" y="0.0"/>
         </scene>
     </scenes>
     <resources>
