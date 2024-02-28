@@ -12,7 +12,9 @@ final class TrainViewController: UIViewController {
     //MARK: - IBOutlets
     @IBOutlet var leftButton: UIButton!
     @IBOutlet var rightButton: UIButton!
+    
     @IBOutlet var questionLabel: UILabel!
+    @IBOutlet var countLabel: UILabel!
     
     
     //MARK: - Properties
@@ -36,9 +38,8 @@ final class TrainViewController: UIViewController {
     private var sign = ""
     private var count = 0 {
         didSet {
-            print("Count = \(count)")
+            print(count)
         }
-        
     }
     
     private var answer: Int {
@@ -132,6 +133,8 @@ final class TrainViewController: UIViewController {
                 self?.configureQuestion()
                 self?.configureButton()
             }
+            
+            countLabel.text = "Ваш счет: \(count)"
         }
     }
 }

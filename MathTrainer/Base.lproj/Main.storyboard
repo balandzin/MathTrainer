@@ -308,16 +308,28 @@
                                     <action selector="rightAction:" destination="Bwo-cv-DvC" eventType="touchUpInside" id="OK9-fa-g4e"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HxT-oc-cBa">
+                                <rect key="frame" x="216.33333333333337" y="50" width="163.66666666666663" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="163.66666666666663" id="wIN-K4-69m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NRL-T1-vMO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="tTj-qL-ILj" firstAttribute="top" secondItem="NRL-T1-vMO" secondAttribute="top" constant="50" id="0a5-IU-HpA"/>
+                            <constraint firstItem="NRL-T1-vMO" firstAttribute="trailing" secondItem="HxT-oc-cBa" secondAttribute="trailing" constant="50" id="5L5-Xi-yEF"/>
                             <constraint firstItem="5q1-dp-Bfb" firstAttribute="centerY" secondItem="ywy-md-gGL" secondAttribute="centerY" id="6Vn-J0-vhs"/>
                             <constraint firstItem="tTj-qL-ILj" firstAttribute="leading" secondItem="NRL-T1-vMO" secondAttribute="leading" constant="50" id="Iif-re-7fL"/>
                             <constraint firstItem="ywy-md-gGL" firstAttribute="top" secondItem="cHQ-RT-mwv" secondAttribute="bottom" constant="80" id="JtM-oa-BV0"/>
+                            <constraint firstItem="NRL-T1-vMO" firstAttribute="leading" secondItem="tTj-qL-ILj" secondAttribute="trailing" constant="-106" id="Mf7-EX-yAk"/>
                             <constraint firstItem="NRL-T1-vMO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tTj-qL-ILj" secondAttribute="trailing" constant="214" id="TfW-VN-bk1"/>
                             <constraint firstItem="ywy-md-gGL" firstAttribute="centerX" secondItem="ERr-aV-7Vn" secondAttribute="centerX" constant="-60" id="faF-V5-LtF"/>
+                            <constraint firstItem="HxT-oc-cBa" firstAttribute="top" secondItem="NRL-T1-vMO" secondAttribute="top" constant="50" id="lCP-Og-dcS"/>
                             <constraint firstItem="cHQ-RT-mwv" firstAttribute="centerY" secondItem="ERr-aV-7Vn" secondAttribute="centerY" constant="-30" id="tUT-Fh-IJ3"/>
                             <constraint firstItem="5q1-dp-Bfb" firstAttribute="centerX" secondItem="ERr-aV-7Vn" secondAttribute="centerX" constant="60" id="uMg-PR-TNJ"/>
                             <constraint firstItem="cHQ-RT-mwv" firstAttribute="centerX" secondItem="ERr-aV-7Vn" secondAttribute="centerX" id="vmg-Cg-IpI"/>
@@ -325,6 +337,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="lc5-04-OQo"/>
                     <connections>
+                        <outlet property="countLabel" destination="HxT-oc-cBa" id="N92-OF-7hO"/>
                         <outlet property="leftButton" destination="ywy-md-gGL" id="vuW-uN-tzZ"/>
                         <outlet property="questionLabel" destination="cHQ-RT-mwv" id="zGN-Qk-0dE"/>
                         <outlet property="rightButton" destination="5q1-dp-Bfb" id="OLk-sP-SXh"/>
