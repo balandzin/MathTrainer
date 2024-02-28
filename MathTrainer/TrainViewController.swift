@@ -126,15 +126,16 @@ final class TrainViewController: UIViewController {
         let isRightAnswer = Int(answer) == self.answer
         
         button.backgroundColor = isRightAnswer ? .systemGreen : .systemRed
-        if isRightAnswer {
-            count += 1
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
-                self?.configureQuestion()
-                self?.configureButton()
-            }
-            
-            countLabel.text = "Ваш счет: \(count)"
+        
+        let isSecondAttempt = rightButton.backgroundColor == .systemRed || leftButton.backgroundColor == .systemRed
+        
+        count += !isSecondAttempt ? 1 : 0
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+            self?.configureQuestion()
+            self?.configureButton()
         }
+        
+        countLabel.text = "Ваш счет: \(count)"
     }
 }
