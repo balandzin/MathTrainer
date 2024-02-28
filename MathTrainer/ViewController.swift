@@ -24,7 +24,6 @@ final class ViewController: UIViewController {
     
     // MARK: - Properties
     private var selectedType: MathTypes = .add
-    var count = 0
     
     // MARK: - Lifecycles
     override func viewDidLoad() {
@@ -58,6 +57,4 @@ final class ViewController: UIViewController {
             button.layer.shadowRadius = 3
         }
     }
-    
-    
 }

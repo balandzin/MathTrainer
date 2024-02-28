@@ -79,7 +79,6 @@ final class TrainViewController: UIViewController {
     }
     
     // MARK: - Actions
-    
     @IBAction func leftAction(_ sender: UIButton) {
         check(answer: sender.titleLabel?.text ?? "", for: sender)
     }
@@ -144,15 +143,17 @@ final class TrainViewController: UIViewController {
         
         button.backgroundColor = isRightAnswer ? .systemGreen : .systemRed
         
-        let isSecondAttempt = rightButton.backgroundColor == .systemRed || leftButton.backgroundColor == .systemRed
-        
-        count += !isSecondAttempt ? 1 : 0
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
-            self?.configureQuestion()
-            self?.configureButton()
+        if isRightAnswer {
+            let isSecondAttempt = rightButton.backgroundColor == .systemRed || leftButton.backgroundColor == .systemRed
+            
+            count += !isSecondAttempt ? 1 : 0
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+                self?.configureQuestion()
+                self?.configureButton()
+            }
+            
+            countLabel.text = "Ваш счет: \(count)"
         }
-        
-        countLabel.text = "Ваш счет: \(count)"
     }
 }
