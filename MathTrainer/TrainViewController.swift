@@ -109,6 +109,13 @@ final class TrainViewController: UIViewController {
         firstNumber = Int.random(in: 1...99)
         secondNumber = Int.random(in: 1...99)
         
+        if type == .divide {
+            while firstNumber % secondNumber != 0 {
+                firstNumber = Int.random(in: 1...99)
+                secondNumber = Int.random(in: 1...99)
+            }
+        }
+        
         let question = "\(firstNumber) \(sign) \(secondNumber) = "
         
         questionLabel.text = question
