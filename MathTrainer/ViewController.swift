@@ -18,8 +18,6 @@ final class ViewController: UIViewController {
     
     // MARK: - Properties
     private var selectedType: MathTypes = .add
-        
-    // MARK: - Properties
     
     // MARK: - Lifecycles
     override func viewDidLoad() {
@@ -43,7 +41,6 @@ final class ViewController: UIViewController {
     
     @IBAction func unwindAction(unwindSegue: UIStoryboardSegue) {}
     
-    
     // MARK: - Methods
     private func configureButton() {
         // Add shadow
@@ -54,7 +51,4 @@ final class ViewController: UIViewController {
             button.layer.shadowRadius = 3
         }
     }
-
-
 }
-
