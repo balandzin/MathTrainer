@@ -58,16 +58,48 @@
 		D33A28EB2B8783C300F5B545 /* MathTrainer */ = {
 			isa = PBXGroup;
 			children = (
-				D33A28EC2B8783C300F5B545 /* AppDelegate.swift */,
-				D33A28EE2B8783C300F5B545 /* SceneDelegate.swift */,
-				D33A28F02B8783C300F5B545 /* ViewController.swift */,
-				D33313032B8B3CDE00035DCA /* TrainViewController.swift */,
-				D33A28F22B8783C300F5B545 /* Main.storyboard */,
-				D33A28F52B8783C400F5B545 /* Assets.xcassets */,
-				D33A28F72B8783C400F5B545 /* LaunchScreen.storyboard */,
-				D33A28FA2B8783C400F5B545 /* Info.plist */,
+				D33AADAE2B8FCBAE00107BD4 /* App */,
+				D33AADAC2B8FCB6B00107BD4 /* ViewControllers */,
+				D33AADAF2B8FCBE900107BD4 /* StoryBoards */,
+				D33AADAD2B8FCB9400107BD4 /* Resources */,
 			);
 			path = MathTrainer;
+			sourceTree = "<group>";
+		};
+		D33AADAC2B8FCB6B00107BD4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D33A28F02B8783C300F5B545 /* ViewController.swift */,
+				D33313032B8B3CDE00035DCA /* TrainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D33AADAD2B8FCB9400107BD4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D33A28F52B8783C400F5B545 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D33AADAE2B8FCBAE00107BD4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D33A28EC2B8783C300F5B545 /* AppDelegate.swift */,
+				D33A28EE2B8783C300F5B545 /* SceneDelegate.swift */,
+				D33A28FA2B8783C400F5B545 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D33AADAF2B8FCBE900107BD4 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				D33A28F22B8783C300F5B545 /* Main.storyboard */,
+				D33A28F72B8783C400F5B545 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,7 +329,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MathTrainer/Info.plist;
+				INFOPLIST_FILE = MathTrainer/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -328,7 +360,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MathTrainer/Info.plist;
+				INFOPLIST_FILE = MathTrainer/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
