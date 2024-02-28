@@ -16,8 +16,15 @@ final class ViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet var buttonCollection: [UIButton]!
     
+    @IBOutlet var addLabel: UILabel!
+    @IBOutlet var subtractLabel: UILabel!
+    @IBOutlet var multiplyLabel: UILabel!
+    @IBOutlet var divideLabel: UILabel!
+    
+    
     // MARK: - Properties
     private var selectedType: MathTypes = .add
+    var count = 0
     
     // MARK: - Lifecycles
     override func viewDidLoad() {
@@ -51,4 +58,6 @@ final class ViewController: UIViewController {
             button.layer.shadowRadius = 3
         }
     }
+    
+    
 }

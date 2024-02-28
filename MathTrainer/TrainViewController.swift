@@ -61,6 +61,23 @@ final class TrainViewController: UIViewController {
         configureButton()
     }
     
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewController = segue.destination as? ViewController {
+            
+            switch type {
+            case .add:
+                viewController.addLabel.text = String(count)
+            case .subtract:
+                viewController.subtractLabel.text = String(count)
+            case .multiply:
+                viewController.multiplyLabel.text = String(count)
+            case .divide:
+                viewController.divideLabel.text = String(count)
+            }
+        }
+    }
+    
     // MARK: - Actions
     
     @IBAction func leftAction(_ sender: UIButton) {

@@ -220,6 +220,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addLabel" destination="fUg-cO-kmC" id="h8O-Ee-1xf"/>
+                        <outlet property="divideLabel" destination="6Hl-r0-cnU" id="jOX-5i-aM3"/>
+                        <outlet property="multiplyLabel" destination="ouN-DP-9rz" id="Tq0-Ja-AaD"/>
+                        <outlet property="subtractLabel" destination="gBX-XO-Js1" id="Rxo-S2-pSr"/>
                         <outletCollection property="buttonCollection" destination="UJa-Hf-pyj" collectionClass="NSMutableArray" id="wJH-Kp-A3W"/>
                         <outletCollection property="buttonCollection" destination="g6R-jc-0FF" collectionClass="NSMutableArray" id="Jmw-Ft-Jny"/>
                         <outletCollection property="buttonCollection" destination="a8f-fo-BtN" collectionClass="NSMutableArray" id="DZW-qJ-cV3"/>
@@ -229,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.58778625954199" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="132.55813953488371" y="3.218884120171674"/>
         </scene>
         <!--Train View Controller-->
         <scene sceneID="ggS-Ah-aId">
