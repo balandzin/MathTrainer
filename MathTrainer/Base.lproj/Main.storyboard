@@ -282,6 +282,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OzL-UF-twm"/>
+                                    <action selector="leftAction:" destination="Bwo-cv-DvC" eventType="touchUpInside" id="gYQ-69-Jj6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5q1-dp-Bfb">
@@ -304,6 +305,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WGI-0W-ty8"/>
+                                    <action selector="rightAction:" destination="Bwo-cv-DvC" eventType="touchUpInside" id="OK9-fa-g4e"/>
                                 </connections>
                             </button>
                         </subviews>
