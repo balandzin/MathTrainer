@@ -323,8 +323,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="lc5-04-OQo"/>
                     <connections>
-                        <outletCollection property="buttonCollection" destination="ywy-md-gGL" collectionClass="NSMutableArray" id="aBo-Mv-GS6"/>
-                        <outletCollection property="buttonCollection" destination="5q1-dp-Bfb" collectionClass="NSMutableArray" id="z56-6H-COE"/>
+                        <outlet property="leftButton" destination="ywy-md-gGL" id="vuW-uN-tzZ"/>
+                        <outlet property="questionLabel" destination="cHQ-RT-mwv" id="zGN-Qk-0dE"/>
+                        <outlet property="rightButton" destination="5q1-dp-Bfb" id="OLk-sP-SXh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4K-PA-a8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
