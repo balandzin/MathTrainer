@@ -7,8 +7,21 @@
 
 import UIKit
 
-enum MathTypes: Int {
+enum MathTypes: Int, CaseIterable {
     case add, subtract, multiply, divide
+    
+    var key: String {
+        switch self {
+        case .add:
+            "addCount"
+        case .subtract:
+            "subtractCount"
+        case .multiply:
+            "multiplyCount"
+        case .divide:
+            "divideCount"
+        }
+    }
 }
 
 final class ViewController: UIViewController {
@@ -16,10 +29,10 @@ final class ViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet var buttonCollection: [UIButton]!
     
-    @IBOutlet var addLabel: UILabel!
-    @IBOutlet var subtractLabel: UILabel!
-    @IBOutlet var multiplyLabel: UILabel!
-    @IBOutlet var divideLabel: UILabel!
+    @IBOutlet var addCountLabel: UILabel!
+    @IBOutlet var subtractCountLabel: UILabel!
+    @IBOutlet var multiplyCountLabel: UILabel!
+    @IBOutlet var divideCountLabel: UILabel!
     
     
     // MARK: - Properties
@@ -30,6 +43,7 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         
         configureButton()
+        setCountLabels()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,9 +59,42 @@ final class ViewController: UIViewController {
         performSegue(withIdentifier: "GoToNext", sender: sender)
     }
     
-    @IBAction func unwindAction(unwindSegue: UIStoryboardSegue) {}
+    @IBAction func unwindAction(unwindSegue: UIStoryboardSegue) {
+        setCountLabels()
+    }
+    
+    @IBAction func clearAction(_ sender: Any) {
+        MathTypes.allCases.forEach { type in
+            let key = type.key
+            UserDefaults.standard.removeObject(forKey: key)
+            addCountLabel.text = "-"
+            subtractCountLabel.text = "-"
+            multiplyCountLabel.text = "-"
+            divideCountLabel.text = "-"
+        }
+        
+    }
+    
     
     // MARK: - Methods
+    private func setCountLabels() {
+        MathTypes.allCases.forEach { type in
+            let key = type.key
+            guard let count = UserDefaults.standard.object(forKey: key) as? Int else { return }
+            
+            switch type {
+            case .add:
+                addCountLabel.text = "\(count)"
+            case .subtract:
+                subtractCountLabel.text = String(count)
+            case .multiply:
+                multiplyCountLabel.text = String(count)
+            case .divide:
+                divideCountLabel.text = String(count)
+            }
+        }
+    }
+    
     private func configureButton() {
         // Add shadow
         buttonCollection.forEach { button in

@@ -14,7 +14,6 @@ final class TrainViewController: UIViewController {
     @IBOutlet var rightButton: UIButton!
     
     @IBOutlet var questionLabel: UILabel!
-    @IBOutlet var countLabel: UILabel!
     
     
     //MARK: - Properties
@@ -39,6 +38,9 @@ final class TrainViewController: UIViewController {
     private var count = 0 {
         didSet {
             print(count)
+            
+            // Save count
+            UserDefaults.standard.set(count, forKey: type.key)
         }
     }
     
@@ -59,22 +61,26 @@ final class TrainViewController: UIViewController {
     override func viewDidLoad() {
         configureQuestion()
         configureButton()
+        
+        if let count = UserDefaults.standard.object(forKey: type.key) as? Int {
+            self.count = count
+        }
     }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let viewController = segue.destination as? ViewController {
             
-            switch type {
-            case .add:
-                viewController.addLabel.text = String(count)
-            case .subtract:
-                viewController.subtractLabel.text = String(count)
-            case .multiply:
-                viewController.multiplyLabel.text = String(count)
-            case .divide:
-                viewController.divideLabel.text = String(count)
-            }
+//            switch type {
+//            case .add:
+//                viewController.addLabel.text = String(count)
+//            case .subtract:
+//                viewController.subtractLabel.text = String(count)
+//            case .multiply:
+//                viewController.multiplyLabel.text = String(count)
+//            case .divide:
+//                viewController.divideLabel.text = String(count)
+//            }
         }
     }
     
@@ -152,8 +158,11 @@ final class TrainViewController: UIViewController {
                 self?.configureQuestion()
                 self?.configureButton()
             }
-            
-            countLabel.text = "Ваш счет: \(count)"
         }
     }
+}
+
+// Создаем собственное хранилище
+extension UserDefaults {
+    static let container = UserDefaults(suiteName: "container")
 }

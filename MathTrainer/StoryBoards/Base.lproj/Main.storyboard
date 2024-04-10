@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -201,6 +201,24 @@
                                     <constraint firstItem="VK8-GO-0OI" firstAttribute="top" secondItem="w8Y-QI-DPz" secondAttribute="top" id="t9D-Gz-hym"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3N-GS-J4z">
+                                <rect key="frame" x="162.66666666666666" y="748" width="104.99999999999997" height="50"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Clear">
+                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="30"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clearAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iik-ab-ZRa"/>
+                                    <action selector="clearAction:" destination="Bwo-cv-DvC" eventType="touchUpInside" id="h4H-0T-db0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -209,8 +227,10 @@
                             <constraint firstItem="DZJ-Yj-pA9" firstAttribute="centerY" secondItem="z6q-ll-U9A" secondAttribute="centerY" id="Ffd-18-xzb"/>
                             <constraint firstItem="DOy-sL-JYS" firstAttribute="centerX" secondItem="z6q-ll-U9A" secondAttribute="centerX" id="Fri-gk-CpU"/>
                             <constraint firstItem="DOy-sL-JYS" firstAttribute="top" secondItem="z6q-ll-U9A" secondAttribute="bottom" constant="20" id="Fw0-Dr-INY"/>
+                            <constraint firstItem="X3N-GS-J4z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wli-P5-OAL"/>
                             <constraint firstItem="z6q-ll-U9A" firstAttribute="top" secondItem="8xu-Nf-eKG" secondAttribute="bottom" constant="40" id="Xsc-pH-tRX"/>
                             <constraint firstItem="z6q-ll-U9A" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZPU-0R-VON"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="X3N-GS-J4z" secondAttribute="bottom" constant="100" id="e6K-WF-agq"/>
                             <constraint firstItem="DZJ-Yj-pA9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="60" id="iJL-KR-rqa"/>
                             <constraint firstItem="w8Y-QI-DPz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="60" id="rSv-fd-3pw"/>
                             <constraint firstItem="8xu-Nf-eKG" firstAttribute="top" secondItem="wXs-wm-PLm" secondAttribute="bottom" constant="40" id="uq5-ab-IZH"/>
@@ -220,10 +240,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addLabel" destination="fUg-cO-kmC" id="h8O-Ee-1xf"/>
-                        <outlet property="divideLabel" destination="6Hl-r0-cnU" id="jOX-5i-aM3"/>
-                        <outlet property="multiplyLabel" destination="ouN-DP-9rz" id="Tq0-Ja-AaD"/>
-                        <outlet property="subtractLabel" destination="gBX-XO-Js1" id="Rxo-S2-pSr"/>
+                        <outlet property="addCountLabel" destination="fUg-cO-kmC" id="h8O-Ee-1xf"/>
+                        <outlet property="divideCountLabel" destination="6Hl-r0-cnU" id="jOX-5i-aM3"/>
+                        <outlet property="multiplyCountLabel" destination="ouN-DP-9rz" id="Tq0-Ja-AaD"/>
+                        <outlet property="subtractCountLabel" destination="gBX-XO-Js1" id="Rxo-S2-pSr"/>
                         <outletCollection property="buttonCollection" destination="UJa-Hf-pyj" collectionClass="NSMutableArray" id="wJH-Kp-A3W"/>
                         <outletCollection property="buttonCollection" destination="g6R-jc-0FF" collectionClass="NSMutableArray" id="Jmw-Ft-Jny"/>
                         <outletCollection property="buttonCollection" destination="a8f-fo-BtN" collectionClass="NSMutableArray" id="DZW-qJ-cV3"/>
@@ -312,34 +332,24 @@
                                     <action selector="rightAction:" destination="Bwo-cv-DvC" eventType="touchUpInside" id="OK9-fa-g4e"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HxT-oc-cBa">
-                                <rect key="frame" x="215" y="307" width="0.0" height="0.0"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NRL-T1-vMO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="tTj-qL-ILj" firstAttribute="top" secondItem="NRL-T1-vMO" secondAttribute="top" constant="50" id="0a5-IU-HpA"/>
                             <constraint firstItem="5q1-dp-Bfb" firstAttribute="centerY" secondItem="ywy-md-gGL" secondAttribute="centerY" id="6Vn-J0-vhs"/>
-                            <constraint firstItem="cHQ-RT-mwv" firstAttribute="top" secondItem="HxT-oc-cBa" secondAttribute="bottom" constant="100" id="DVk-Lf-UUE"/>
                             <constraint firstItem="tTj-qL-ILj" firstAttribute="leading" secondItem="NRL-T1-vMO" secondAttribute="leading" constant="50" id="Iif-re-7fL"/>
                             <constraint firstItem="ywy-md-gGL" firstAttribute="top" secondItem="cHQ-RT-mwv" secondAttribute="bottom" constant="80" id="JtM-oa-BV0"/>
                             <constraint firstItem="NRL-T1-vMO" firstAttribute="leading" secondItem="tTj-qL-ILj" secondAttribute="trailing" constant="-106" id="Mf7-EX-yAk"/>
                             <constraint firstItem="NRL-T1-vMO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tTj-qL-ILj" secondAttribute="trailing" constant="214" id="TfW-VN-bk1"/>
                             <constraint firstItem="ywy-md-gGL" firstAttribute="centerX" secondItem="ERr-aV-7Vn" secondAttribute="centerX" constant="-60" id="faF-V5-LtF"/>
                             <constraint firstItem="cHQ-RT-mwv" firstAttribute="centerY" secondItem="ERr-aV-7Vn" secondAttribute="centerY" constant="-30" id="tUT-Fh-IJ3"/>
-                            <constraint firstItem="HxT-oc-cBa" firstAttribute="centerX" secondItem="ERr-aV-7Vn" secondAttribute="centerX" id="tWL-Og-GWx"/>
                             <constraint firstItem="5q1-dp-Bfb" firstAttribute="centerX" secondItem="ERr-aV-7Vn" secondAttribute="centerX" constant="60" id="uMg-PR-TNJ"/>
                             <constraint firstItem="cHQ-RT-mwv" firstAttribute="centerX" secondItem="ERr-aV-7Vn" secondAttribute="centerX" id="vmg-Cg-IpI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lc5-04-OQo"/>
                     <connections>
-                        <outlet property="countLabel" destination="HxT-oc-cBa" id="N92-OF-7hO"/>
                         <outlet property="leftButton" destination="ywy-md-gGL" id="vuW-uN-tzZ"/>
                         <outlet property="questionLabel" destination="cHQ-RT-mwv" id="zGN-Qk-0dE"/>
                         <outlet property="rightButton" destination="5q1-dp-Bfb" id="OLk-sP-SXh"/>
